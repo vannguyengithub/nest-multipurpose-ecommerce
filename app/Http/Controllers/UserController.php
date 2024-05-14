@@ -74,6 +74,6 @@ class UserController extends Controller
         ]);
 
         return back()->with("status", "User Password Changed  Successfully!");
-    }
+    }// end method
 
 }
