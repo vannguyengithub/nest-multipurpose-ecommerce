@@ -18,7 +18,7 @@
 
     </div>
     <!--end breadcrumb-->
-    <div class="container">
+    <div class="">
         <div class="main-body">
             <div class="row">
                 <div class="col-lg-4">
@@ -104,6 +104,7 @@
                                             <option value="2024" {{ $vendorData->vendor_join  == '2024' ? 'selected' : '' }}>2024</option>
                                             <option value="2025" {{ $vendorData->vendor_join  == '2025' ? 'selected' : '' }}>2025</option>
                                             <option value="2026" {{ $vendorData->vendor_join  == '2026' ? 'selected' : '' }}>2026</option>
+                                            <option value="2026" {{ $vendorData->vendor_join  == '2027' ? 'selected' : '' }}>2027</option>
                                         </select>
                                     </div>
                                 </div>

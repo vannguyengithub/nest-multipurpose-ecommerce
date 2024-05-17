@@ -13,114 +13,74 @@
     <ul class="metismenu" id="menu">
         <li>
             <a href="{{ route('admin.dashboard') }}">
-                <div class="parent-icon"><i class='bx bx-cookie'></i>
+                <div class="parent-icon"><i class="fa-solid fa-gauge-high"></i>
                 </div>
                 <div class="menu-title">Dashboard</div>
             </a>
         </li>
         <li>
             <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class='bx bx-home-circle'></i>
+                <div class="parent-icon"><i class="fa-solid fa-handshake"></i>
                 </div>
                 <div class="menu-title">Brand</div>
             </a>
             <ul>
-                <li> <a href="{{ route('all.brand') }}"><i class="bx bx-right-arrow-alt"></i>All Brand</a>
+                <li> <a href="{{ route('all.brand') }}"><i class="fa-solid fa-arrow-right"></i></i>All Brand</a>
                 </li>
-                <li> <a href="{{ route('add.brand') }}"><i class="bx bx-right-arrow-alt"></i>Add Brand</a>
+                <li> <a href="{{ route('add.brand') }}"><i class="fa-solid fa-arrow-right"></i></i>Add Brand</a>
                 </li>
             </ul>
         </li>
         <li>
             <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class="bx bx-category"></i>
+                <div class="parent-icon"><i class="fa-solid fa-list"></i>
                 </div>
                 <div class="menu-title">Category</div>
             </a>
             <ul>
-                <li> <a href="{{ route('all.category') }}"><i class="bx bx-right-arrow-alt"></i>All Category</a>
+                <li> <a href="{{ route('all.category') }}"><i class="fa-solid fa-arrow-right"></i></i>All Category</a>
                 </li>
-                <li> <a href="{{ route('add.category') }}"><i class="bx bx-right-arrow-alt"></i>Add Category</a>
+                <li> <a href="{{ route('add.category') }}"><i class="fa-solid fa-arrow-right"></i></i>Add Category</a>
             </ul>
         </li>
         <li>
             <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class="bx bx-category"></i>
+                <div class="parent-icon"><i class="fa-solid fa-list"></i>
                 </div>
                 <div class="menu-title">Sub Category</div>
             </a>
             <ul>
-                <li> <a href="{{ route('all.subcategory') }}"><i class="bx bx-right-arrow-alt"></i>All SubCategory</a>
+                <li> <a href="{{ route('all.subcategory') }}"><i class="fa-solid fa-arrow-right"></i></i>All SubCategory</a>
                 </li>
-                <li> <a href="{{ route('add.subcategory') }}"><i class="bx bx-right-arrow-alt"></i>Add SubCategory</a>
+                <li> <a href="{{ route('add.subcategory') }}"><i class="fa-solid fa-arrow-right"></i></i>Add SubCategory</a>
             </ul>
         </li>
-        <li class="menu-label">UI Elements</li>
-        <li>
-            <a href="widgets.html">
-                <div class="parent-icon"><i class='bx bx-cookie'></i>
-                </div>
-                <div class="menu-title">Widgets</div>
-            </a>
-        </li>
+
         <li>
             <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class='bx bx-cart'></i>
+                <div class="parent-icon"><i class="fa-solid fa-user-gear"></i>
                 </div>
-                <div class="menu-title">eCommerce</div>
+                <div class="menu-title">Vendor Manage</div>
             </a>
             <ul>
-                <li> <a href="ecommerce-products.html"><i class="bx bx-right-arrow-alt"></i>Products</a>
+                <li> <a href="{{ route('inactive.vendor') }}"><i class="fa-solid fa-arrow-right"></i></i>Inactive Vendor</a>
                 </li>
-                <li> <a href="ecommerce-products-details.html"><i class="bx bx-right-arrow-alt"></i>Product Details</a>
-                </li>
-                <li> <a href="ecommerce-add-new-products.html"><i class="bx bx-right-arrow-alt"></i>Add New Products</a>
-                </li>
-                <li> <a href="ecommerce-orders.html"><i class="bx bx-right-arrow-alt"></i>Orders</a>
+                <li> <a href="{{ route('active.vendor') }}"><i class="fa-solid fa-arrow-right"></i></i>Active Vendor</a>
                 </li>
             </ul>
         </li>
         <li>
             <a class="has-arrow" href="javascript:;">
-                <div class="parent-icon"><i class='bx bx-bookmark-heart'></i>
+                <div class="parent-icon"><i class="fa-solid fa-store"></i>
                 </div>
-                <div class="menu-title">Components</div>
+                <div class="menu-title">Product Manage</div>
             </a>
             <ul>
-                <li> <a href="component-alerts.html"><i class="bx bx-right-arrow-alt"></i>Alerts</a>
+                <li> <a href="{{ route('all.product') }}"><i class="fa-solid fa-arrow-right"></i></i>All Product</a>
                 </li>
-                <li> <a href="component-accordions.html"><i class="bx bx-right-arrow-alt"></i>Accordions</a>
+                <li> <a href="{{ route('add.product') }}"><i class="fa-solid fa-arrow-right"></i></i>Add Product</a>
                 </li>
-                <li> <a href="component-badges.html"><i class="bx bx-right-arrow-alt"></i>Badges</a>
-                </li>
-                <li> <a href="component-buttons.html"><i class="bx bx-right-arrow-alt"></i>Buttons</a>
-                </li>
-                <li> <a href="component-cards.html"><i class="bx bx-right-arrow-alt"></i>Cards</a>
-                </li>
-                <li> <a href="component-carousels.html"><i class="bx bx-right-arrow-alt"></i>Carousels</a>
-                </li>
-                <li> <a href="component-list-groups.html"><i class="bx bx-right-arrow-alt"></i>List Groups</a>
-                </li>
-                <li> <a href="component-media-object.html"><i class="bx bx-right-arrow-alt"></i>Media Objects</a>
-                </li>
-                <li> <a href="component-modals.html"><i class="bx bx-right-arrow-alt"></i>Modals</a>
-                </li>
-                <li> <a href="component-navs-tabs.html"><i class="bx bx-right-arrow-alt"></i>Navs & Tabs</a>
-                </li>
-                <li> <a href="component-navbar.html"><i class="bx bx-right-arrow-alt"></i>Navbar</a>
-                </li>
-                <li> <a href="component-paginations.html"><i class="bx bx-right-arrow-alt"></i>Pagination</a>
-                </li>
-                <li> <a href="component-popovers-tooltips.html"><i class="bx bx-right-arrow-alt"></i>Popovers & Tooltips</a>
-                </li>
-                <li> <a href="component-progress-bars.html"><i class="bx bx-right-arrow-alt"></i>Progress</a>
-                </li>
-                <li> <a href="component-spinners.html"><i class="bx bx-right-arrow-alt"></i>Spinners</a>
-                </li>
-                <li> <a href="component-notifications.html"><i class="bx bx-right-arrow-alt"></i>Notifications</a>
-                </li>
-                <li> <a href="component-avtars-chips.html"><i class="bx bx-right-arrow-alt"></i>Avatrs & Chips</a>
-                </li>
+
             </ul>
         </li>
         <li>
@@ -130,11 +90,11 @@
                 <div class="menu-title">Content</div>
             </a>
             <ul>
-                <li> <a href="content-grid-system.html"><i class="bx bx-right-arrow-alt"></i>Grid System</a>
+                <li> <a href="content-grid-system.html"><i class="fa-solid fa-arrow-right"></i></i>Grid System</a>
                 </li>
-                <li> <a href="content-typography.html"><i class="bx bx-right-arrow-alt"></i>Typography</a>
+                <li> <a href="content-typography.html"><i class="fa-solid fa-arrow-right"></i></i>Typography</a>
                 </li>
-                <li> <a href="content-text-utilities.html"><i class="bx bx-right-arrow-alt"></i>Text Utilities</a>
+                <li> <a href="content-text-utilities.html"><i class="fa-solid fa-arrow-right"></i></i>Text Utilities</a>
                 </li>
             </ul>
         </li>
@@ -145,11 +105,11 @@
                 <div class="menu-title">Icons</div>
             </a>
             <ul>
-                <li> <a href="icons-line-icons.html"><i class="bx bx-right-arrow-alt"></i>Line Icons</a>
+                <li> <a href="icons-line-icons.html"><i class="fa-solid fa-arrow-right"></i></i>Line Icons</a>
                 </li>
-                <li> <a href="icons-boxicons.html"><i class="bx bx-right-arrow-alt"></i>Boxicons</a>
+                <li> <a href="icons-boxicons.html"><i class="fa-solid fa-arrow-right"></i></i>Boxicons</a>
                 </li>
-                <li> <a href="icons-feather-icons.html"><i class="bx bx-right-arrow-alt"></i>Feather Icons</a>
+                <li> <a href="icons-feather-icons.html"><i class="fa-solid fa-arrow-right"></i></i>Feather Icons</a>
                 </li>
             </ul>
         </li>

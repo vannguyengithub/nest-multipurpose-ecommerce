@@ -28,6 +28,10 @@
 
 	<link href="{{ asset('adminbackend/assets/plugins/datatable/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
 
+    <!-- <link href="{{ asset('adminbackend/assets/plugins/Drag-And-Drop/dist/imageuploadify.min.css') }}" rel="stylesheet" /> -->
+
+	<link href="{{ asset('adminbackend/assets/plugins/input-tags/css/tagsinput.css') }}" rel="stylesheet" />
+
 	<title>Admin</title>
 </head>
 
@@ -57,8 +61,8 @@
 		@include('admin.body.footer');
 	</div>
 	<!--end wrapper-->
-	<!--start switcher-->
-	<!--end switcher-->
+    <!-- jquery -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
 	<!-- Bootstrap JS -->
 	<script src="{{ asset('adminbackend/assets/js/bootstrap.bundle.min.js') }}"></script>
 	<!--plugins-->
@@ -94,6 +98,9 @@
     <!-- toast -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <script>
     @if(Session::has('message'))
     var type = "{{ Session::get('alert-type','info') }}"
@@ -120,6 +127,21 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <script src="{{ asset('adminbackend/assets/js/code.js') }}"></script>
+
+    <!-- <script src="{{ asset('adminbackend/assets/plugins/Drag-And-Drop/dist/imageuploadify.min.js') }}"></script>
+    <script>
+        $(document).ready(function () {
+            $('#image-uploadify').imageuploadify();
+        })
+    </script> -->
+
+	<script src="{{ asset('adminbackend/assets/plugins/input-tags/js/tagsinput.js') }}"></script>
+    <!-- ckedit -->
+
+    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('mytextarea');
+    </script>
 
 </body>
 

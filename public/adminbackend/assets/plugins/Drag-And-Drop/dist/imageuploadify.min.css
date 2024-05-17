@@ -68,7 +68,7 @@
 	margin-bottom: 1em;
 	float: left;
 	border-radius: 12px;
-	box-shadow: 0 0 4px 0 #888
+	/* box-shadow: 0 0 4px 0 #888 */
 }
 .imageuploadify .imageuploadify-images-list .imageuploadify-container button.btn-danger {
 	position: absolute;
