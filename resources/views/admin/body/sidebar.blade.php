@@ -13,72 +13,72 @@
     <ul class="metismenu" id="menu">
         <li>
             <a href="{{ route('admin.dashboard') }}">
-                <div class="parent-icon"><i class="fa-solid fa-gauge-high"></i>
+                <div class="parent-icon"><i class="fa-solid fa-gauge-high" style="font-size: 16px;"></i>
                 </div>
                 <div class="menu-title">Dashboard</div>
             </a>
         </li>
         <li>
             <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class="fa-solid fa-handshake"></i>
+                <div class="parent-icon"><i class="fa-solid fa-handshake" style="font-size: 16px;"></i>
                 </div>
                 <div class="menu-title">Brand</div>
             </a>
             <ul>
-                <li> <a href="{{ route('all.brand') }}"><i class="fa-solid fa-arrow-right"></i></i>All Brand</a>
+                <li> <a href="{{ route('all.brand') }}"><i class="fa-solid fa-arrow-right" style="font-size: 16px;"></i></i>All Brand</a>
                 </li>
-                <li> <a href="{{ route('add.brand') }}"><i class="fa-solid fa-arrow-right"></i></i>Add Brand</a>
+                <li> <a href="{{ route('add.brand') }}"><i class="fa-solid fa-arrow-right" style="font-size: 16px;"></i></i>Add Brand</a>
                 </li>
             </ul>
         </li>
         <li>
             <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class="fa-solid fa-list"></i>
+                <div class="parent-icon"><i class="fa-solid fa-list" style="font-size: 16px;"></i>
                 </div>
                 <div class="menu-title">Category</div>
             </a>
             <ul>
-                <li> <a href="{{ route('all.category') }}"><i class="fa-solid fa-arrow-right"></i></i>All Category</a>
+                <li> <a href="{{ route('all.category') }}"><i class="fa-solid fa-arrow-right" style="font-size: 16px;"></i>All Category</a>
                 </li>
-                <li> <a href="{{ route('add.category') }}"><i class="fa-solid fa-arrow-right"></i></i>Add Category</a>
+                <li> <a href="{{ route('add.category') }}"><i class="fa-solid fa-arrow-right" style="font-size: 16px;"></i>Add Category</a>
             </ul>
         </li>
         <li>
             <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class="fa-solid fa-list"></i>
+                <div class="parent-icon"><i class="fa-solid fa-list" style="font-size: 16px;"></i>
                 </div>
                 <div class="menu-title">Sub Category</div>
             </a>
             <ul>
-                <li> <a href="{{ route('all.subcategory') }}"><i class="fa-solid fa-arrow-right"></i></i>All SubCategory</a>
+                <li> <a href="{{ route('all.subcategory') }}"><i class="fa-solid fa-arrow-right" style="font-size: 16px;"></i>All SubCategory</a>
                 </li>
-                <li> <a href="{{ route('add.subcategory') }}"><i class="fa-solid fa-arrow-right"></i></i>Add SubCategory</a>
+                <li> <a href="{{ route('add.subcategory') }}"><i class="fa-solid fa-arrow-right" style="font-size: 16px;"></i>Add SubCategory</a>
             </ul>
         </li>
 
         <li>
             <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class="fa-solid fa-user-gear"></i>
+                <div class="parent-icon"><i class="fa-solid fa-user-gear" style="font-size: 16px;"></i>
                 </div>
                 <div class="menu-title">Vendor Manage</div>
             </a>
             <ul>
-                <li> <a href="{{ route('inactive.vendor') }}"><i class="fa-solid fa-arrow-right"></i></i>Inactive Vendor</a>
+                <li> <a href="{{ route('inactive.vendor') }}"><i class="fa-solid fa-arrow-right" style="font-size: 16px;"></i>Inactive Vendor</a>
                 </li>
-                <li> <a href="{{ route('active.vendor') }}"><i class="fa-solid fa-arrow-right"></i></i>Active Vendor</a>
+                <li> <a href="{{ route('active.vendor') }}"><i class="fa-solid fa-arrow-right" style="font-size: 16px;"></i>Active Vendor</a>
                 </li>
             </ul>
         </li>
         <li>
             <a class="has-arrow" href="javascript:;">
-                <div class="parent-icon"><i class="fa-solid fa-store"></i>
+                <div class="parent-icon"><i class="fa-solid fa-store" style="font-size: 16px;"></i>
                 </div>
                 <div class="menu-title">Product Manage</div>
             </a>
             <ul>
-                <li> <a href="{{ route('all.product') }}"><i class="fa-solid fa-arrow-right"></i></i>All Product</a>
+                <li> <a href="{{ route('all.product') }}"><i class="fa-solid fa-arrow-right" style="font-size: 16px;"></i>All Product</a>
                 </li>
-                <li> <a href="{{ route('add.product') }}"><i class="fa-solid fa-arrow-right"></i></i>Add Product</a>
+                <li> <a href="{{ route('add.product') }}"><i class="fa-solid fa-arrow-right" style="font-size: 16px;"></i>Add Product</a>
                 </li>
 
             </ul>

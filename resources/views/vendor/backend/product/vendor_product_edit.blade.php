@@ -1,17 +1,17 @@
-@extends('admin.admin_dashboard');
-@section('admin')
+@extends('vendor.vendor_dashboard');
+@section('vendor')
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <div class="page-content">
     <!--breadcrumb-->
     <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-        <div class="breadcrumb-title pe-3">Product Edit</div>
+        <div class="breadcrumb-title pe-3">Vendor Product Edit</div>
         <div class="ps-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0 p-0">
                     <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
                     </li>
-                    <li class="breadcrumb-item active" aria-current="page">Edit Product</li>
+                    <li class="breadcrumb-item active" aria-current="page">Vendor Edit Product</li>
                 </ol>
             </nav>
         </div>
@@ -20,9 +20,9 @@
     <!--end breadcrumb-->
     <div class="card">
         <div class="card-body p-4">
-            <h5 class="card-title">Edit Product</h5>
+            <h5 class="card-title">Vendor Edit Product</h5>
             <hr/>
-            <form id="myForm" method="post" action="{{ route('update.product') }}">
+            <form id="myForm" method="post" action="{{ route('vendor.update.product') }}">
                 @csrf
                 <input type="hidden" name="id" value="{{ $products->id }}">
                 <div class="form-body mt-4">
@@ -62,19 +62,6 @@
                                         {!! $products->long_descp !!}
                                     </textarea>
                                 </div>
-                                <!-- <div class="form-group  mb-3">
-                                    <label for="inputProductDescription" class="form-label">Main Thumbnail</label>
-                                    <input class="form-control" name="product_thumbnail" type="file" id="formFile" onChange="mainThumbUrl(this)" />
-                                    <br>
-                                    <img id="mainThumb" src="" alt="" style="object-fit: contain; border: 1px solid; border-radius: 4px;">
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label for="multi_image" class="form-label">Multiple Images</label>
-                                    <input class="form-control" type="file" name="multi_img[]" id="multiImg" multiple >
-                                    <br>
-                                    <br>
-                                    <div class="row" id="preview_img"></div>
-                                </div> -->
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -122,16 +109,6 @@
                                         <select class="form-select" name="subcategory_id" id="inputCollection">
                                             @foreach($subcategory as $subcat)
                                             <option value="{{ $subcat->id }}" {{ $subcat->id == $products->subcategory_id ? 'selected' : ''}}> {{ $subcat->subcategory_name }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group col-12">
-                                        <label for="inputVendor" class="form-label">Select Vendor</label>
-                                        <select name="vendor_id" class="form-select" id="inputVendor">
-                                            <option></option>
-                                            @foreach($activeVendor as $vendor)
-                                            <option value="{{ $vendor->id }}" {{ $vendor->id == $products->vendor_id ? 'selected' : ''}}>{{ $vendor->name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -185,9 +162,9 @@
 <div class="page-content">
     <div class="card">
         <div class="card-body p-4">
-            <h5 class="card-title">Update Main Image Thumbnail</h5>
+            <h5 class="card-title">Vendor Update Main Image Thumbnail</h5>
             <hr/>
-            <form id="myForm" method="post" action="{{ route('update.product.thumbnail') }}" enctype="multipart/form-data">
+            <form id="myForm" method="post" action="{{ route('vendor.update.product.thumbnail') }}" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" name="id" value="{{ $products->id }}">
                 <input type="hidden" name="old_img" value="{{ $products->product_thumbnail }}">
@@ -221,9 +198,9 @@
 <div class="page-content">
     <div class="card">
         <div class="card-body p-4">
-            <h5 class="card-title">Add An Image To Multi Image</h5>
+            <h5 class="card-title">Vendor Add An Image To Multi Image</h5>
             <hr/>
-            <form method="post" action="{{ route('store.new.multiimage') }}" enctype="multipart/form-data">
+            <form method="post" action="{{ route('vendor.store.new.multiimage') }}" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" name="imageid" value="{{ $products->id }}">
                 <div class="row">
@@ -248,7 +225,7 @@
 <div class="page-content">
     <div class="card">
         <div class="card-body p-4">
-            <h5 class="card-title">Update Multi Image</h5>
+            <h5 class="card-title">Vendor Update Multi Image</h5>
             <hr/>
             <div class="table-responsive">
                 <table class="table table-striped table-bordered " style="width:100%">
@@ -261,7 +238,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <form id="myForm" method="post" action="{{ route('update.product.multiimage') }}" enctype="multipart/form-data">
+                        <form id="myForm" method="post" action="{{ route('vendor.update.product.multiimage') }}" enctype="multipart/form-data">
                             @csrf
 
                             @foreach($multiImgs as $key => $img )
@@ -278,7 +255,7 @@
                                 <td>
                                     <div style="display: flex; align-items: center; justify-content: center; height: 100px; gap: 8px;">
                                         <input type="submit" class="btn btn-primary" value="Update Image">
-                                        <a href="{{ route('product.multiimg.delete', $img->id) }}" class="btn btn-danger" id="delete">Detele</a>
+                                        <a href="{{ route('vendor.product.multiimg.delete', $img->id) }}" class="btn btn-danger" id="delete">Detele</a>
                                     </div>
                                 </td>
                             </tr>
@@ -303,13 +280,9 @@
 <script  type="text/javascript">
     $(document).ready(function() {
         function formatCurrency(input) {
-            // Loại bỏ tất cả các ký tự không phải số
             input = input.replace(/[^0-9]/g, '');
-
-            // Định dạng lại giá trị với dấu chấm phân cách hàng nghìn
             return input.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
         }
-
         $('#price-product-format, #discount-price-format').on('input', function() {
             var formattedValue = formatCurrency($(this).val());
             $(this).val(formattedValue);
@@ -335,7 +308,7 @@
             var category_id = $(this).val();
             if (category_id) {
                 $.ajax({
-                    url: "/subcategory/ajax/" + category_id, // Corrected URL
+                    url: "/vendor/subcategory/ajax/" + category_id, // Corrected URL
                     type: "GET",
                     dataType: "json",
                     success: function(data) {

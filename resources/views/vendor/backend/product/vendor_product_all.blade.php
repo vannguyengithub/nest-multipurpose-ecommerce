@@ -1,5 +1,5 @@
-@extends('admin.admin_dashboard');
-@section('admin')
+@extends('vendor.vendor_dashboard');
+@section('vendor')
 
 <div class="page-content">
 <!--breadcrumb-->
@@ -16,7 +16,7 @@
     </div>
     <div class="ms-auto">
         <div class="btn-group">
-            <a href="{{ route('add.product') }}" class="btn btn-primary">Add Product</a>
+            <a href="{{ route('vendor.add.product') }}" class="btn btn-primary">Add Product</a>
         </div>
     </div>
 </div>
@@ -35,8 +35,8 @@
                         <th>Image</th>
                         <th>Product Name</th>
                         <th>Price</th>
-                        <th>QTY</th>
                         <th>Discount</th>
+                        <th> QTY</th>
                         <th>Status</th>
                         <th>Action</th>
                     </tr>
@@ -50,7 +50,6 @@
                         </td>
                         <td>{{ $item->product_name }}</td>
                         <td>{{ $item->selling_price }}</td>
-                        <td>{{ $item->product_qty }}</td>
                         <td>
                             @php
                                 $selling_price = (int) str_replace('.', '', $item->selling_price);
@@ -66,6 +65,8 @@
                                 <span class="badge rounded-pill bg-info">No Discount</span>
                             @endif
                         </td>
+                        <td>{{ $item->product_qty }}</td>
+
                         <td>
                             @if($item->status == 1)
                             <span class="badge rounded-pill bg-success">Active</span>
@@ -74,21 +75,21 @@
                             @endif
                         </td>
                         <td>
-                            <a href="{{ route('edit.product', $item->id) }}" class="btn btn-info" title="Edit Product">
+                            <a href="{{ route('vendor.edit.product', $item->id) }}" class="btn btn-info" title="Edit Product">
                                 <div class="fa-solid fa-pen-to-square"></div>
                             </a>
-                            <a href="{{ route('delete.product', $item->id) }}" class="btn btn-danger" id="delete" title="Delete Product">
+                            <a href="{{ route('vendor.delete.product', $item->id) }}" class="btn btn-danger" id="delete" title="Delete Product">
                                 <div class="fa-solid fa-trash-can"></div>
                             </a>
                             <a href="{{ route('delete.category', $item->id) }}" class="btn btn-warning" title="Details Page">
                                 <div class="fa-regular fa-eye"></div>
                             </a>
                             @if($item->status == 1)
-                            <a href="{{ route('product.inactive', $item->id) }}" class="btn btn-danger"  title="Inactive">
+                            <a href="{{ route('vendor.product.inactive', $item->id) }}" class="btn btn-danger"  title="Inactive">
                                 <div class="fa-solid fa-thumbs-down"></div>
                             </a>
                             @else
-                            <a href="{{ route('product.active', $item->id) }}" class="btn btn-warning"  title="Active">
+                            <a href="{{ route('vendor.product.active', $item->id) }}" class="btn btn-warning"  title="Active">
                                 <div class="fa-solid fa-thumbs-up"></div>
                             </a>
                             @endif

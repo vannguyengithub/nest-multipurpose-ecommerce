@@ -26,7 +26,12 @@
     <!-- toast -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
 
-	<title>Vendor</title>
+	<link href="{{ asset('adminbackend/assets/plugins/datatable/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
+
+	<link href="{{ asset('adminbackend/assets/plugins/input-tags/css/tagsinput.css') }}" rel="stylesheet" />
+
+
+	<title>Vendor Dashboard</title>
 </head>
 
 <body>
@@ -70,17 +75,29 @@
 	<script src="{{ asset('adminbackend/assets/plugins/sparkline-charts/jquery.sparkline.min.js') }}"></script>
 	<script src="{{ asset('adminbackend/assets/plugins/jquery-knob/excanvas.js') }}"></script>
 	<script src="{{ asset('adminbackend/assets/plugins/jquery-knob/jquery.knob.js') }}"></script>
-	  <script>
-		  $(function() {
-			  $(".knob").knob();
-		  });
-	  </script>
-	  <script src="{{ asset('adminbackend/assets/js/index.js') }}"></script>
+    <script>
+        $(function() {
+            $(".knob").knob();
+        });
+    </script>
+    <script src="{{ asset('adminbackend/assets/js/index.js') }}"></script>
+    <script src="{{ asset('adminbackend/assets/js/validate.min.js') }}"></script>
 	<!--app JS-->
 	<script src="{{ asset('adminbackend/assets/js/app.js') }}"></script>
 
+    <!--tables-->
+	<script src="{{ asset('adminbackend/assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
+	<script src="{{ asset('adminbackend/assets/plugins/datatable/js/dataTables.bootstrap5.min.js') }}"></script>
+    <script>
+		$(document).ready(function() {
+			$('#example').DataTable();
+		  } );
+	</script>
     <!-- toast -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script>
     @if(Session::has('message'))
@@ -104,6 +121,26 @@
     }
     @endif
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <script src="{{ asset('adminbackend/assets/js/code.js') }}"></script>
+
+    <!-- <script src="{{ asset('adminbackend/assets/plugins/Drag-And-Drop/dist/imageuploadify.min.js') }}"></script>
+    <script>
+        $(document).ready(function () {
+            $('#image-uploadify').imageuploadify();
+        })
+    </script> -->
+
+	<script src="{{ asset('adminbackend/assets/plugins/input-tags/js/tagsinput.js') }}"></script>
+    <!-- ckedit -->
+
+    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('mytextarea');
+    </script>
+
 </body>
 
 </html>
