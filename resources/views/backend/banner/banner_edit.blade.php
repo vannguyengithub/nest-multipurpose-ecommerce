@@ -5,13 +5,13 @@
 <div class="page-content">
     <!--breadcrumb-->
     <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-        <div class="breadcrumb-title pe-3">Edit Slider</div>
+        <div class="breadcrumb-title pe-3">Edit Banner</div>
         <div class="ps-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0 p-0">
                     <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}"><i class="bx bx-home-alt"></i></a>
                     </li>
-                    <li class="breadcrumb-item active" aria-current="page">Edit Slider</li>
+                    <li class="breadcrumb-item active" aria-current="page">Edit Banner</li>
                 </ol>
             </nav>
         </div>
@@ -24,37 +24,37 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <form id="myForm" method="post" action="{{ route('update.slider') }}" enctype="multipart/form-data">
+                            <form id="myForm" method="post" action="{{ route('update.banner') }}" enctype="multipart/form-data">
                                 @csrf
-                                <input type="hidden" name="id" value="{{ $sliders->id }}">
-                                <input class="form-control" type="hidden" name="old_image" value="{{ $sliders->slider_image }}" />
+
+                                <input type="hidden" name="id" value="{{ $banners->id }}">
+                                <input class="form-control" type="hidden" name="old_image" value="{{ $banners->banner_image }}" />
+
                                 <div class=" form-group row mb-3">
                                     <div class="col-sm-3">
-                                        <h6 class="mb-0">Slider Title</h6>
+                                        <h6 class="mb-0">Banner Title</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary form-group">
-                                        <input type="text" name="slider_title" class="form-control" placeholder="Enter slider title..." value="{{ $sliders->slider_title }}" />
+                                        <input type="text" name="banner_title" class="form-control" placeholder="Enter banner title..." value="{{ $banners->banner_title }}" />
                                     </div>
                                 </div>
 
 
                                 <div class="row mb-3">
                                     <div class="col-sm-3">
-                                        <h6 class="mb-0">Short Title</h6>
+                                        <h6 class="mb-0">Banner URL</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary form-group">
-                                        <textarea class="form-control" name="short_title" id="" rows="3">
-                                            {{ $sliders->short_title }}
-                                        </textarea>
+                                        <input type="text" name="banner_url" class="form-control" placeholder="Enter banner url..." value="{{ $banners->banner_url }}"/>
                                     </div>
                                 </div>
 
                                 <div class="row mb-3">
                                     <div class="col-sm-3">
-                                        <h6 class="mb-0">Slider Image</h6>
+                                        <h6 class="mb-0">Banner Image</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
-                                        <input type="file" class="form-control" name="slider_image" id="image"/>
+                                        <input type="file" class="form-control" name="banner_image" id="image"/>
                                     </div>
                                 </div>
                                 <div class="row mb-3">
@@ -62,13 +62,13 @@
                                         <h6 class="mb-0">Show Image</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary" style="">
-                                        <img id="showImage" src="{{ (!empty($sliders->slider_image)) ? asset($sliders->slider_image) : url('upload/no_image.jpg') }}" alt="Slider" style="width: 100%; height: 400px; object-fit: fill; border: 0.5px solid lightgray;">
+                                        <img id="showImage" src="{{ (!empty($banners->banner_image)) ? asset($banners->banner_image) : url('upload/no_image.jpg') }}" alt="Slider" style="width: 768px; height: 450px; object-fit: fill; border: 0.5px solid lightgray;">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3"></div>
                                     <div class="col-sm-9 text-secondary">
-                                        <input type="submit" class="btn btn-primary px-4" value="Update Slider" />
+                                        <input type="submit" class="btn btn-primary px-4" value="Save Change" />
                                     </div>
                                 </div>
                             </form>
@@ -93,19 +93,19 @@
     $(document).ready(function() {
         $('#myForm').validate({
             rules: {
-                slider_title: {
+                banner_title: {
                     required: true,
                 },
-                short_title: {
+                banner_url: {
                     required: true,
                 },
             },
             messages: {
-                slider_title: {
-                    required: 'Please Enter Slider Title',
+                banner_title: {
+                    required: 'Please Enter Banner Title',
                 },
-                short_title: {
-                    required: 'Please Enter Short Title',
+                banner_url: {
+                    required: 'Please Enter Banner Url',
                 },
             },
             errorElement: 'span',
