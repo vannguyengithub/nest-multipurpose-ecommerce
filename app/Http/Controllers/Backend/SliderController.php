@@ -96,4 +96,33 @@ class SliderController extends Controller
 
         return redirect()->back()->with($notification);
     }
+
+    public function deleteSelected(Request $request)
+    {
+        $sliderIds = $request->input('slider_ids');
+        if ($sliderIds) {
+            $sliders = Slider::whereIn('id', $sliderIds)->get();
+
+            foreach ($sliders as $slider) {
+                $img = $slider->slider_image;
+                if (file_exists($img)) {
+                    unlink($img);
+                }
+            }
+
+            Slider::whereIn('id', $sliderIds)->delete();
+
+            $notification = array(
+                'message' => 'Selected Sliders Deleted Successfully',
+                'alert-type' => 'success'
+            );
+            return redirect()->back()->with($notification);
+        } else {
+            $notification = array(
+                'message' => 'No sliders selected.',
+                'alert-type' => 'error'
+            );
+            return redirect()->back()->with($notification);
+        }
+    }
 }

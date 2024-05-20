@@ -247,6 +247,9 @@ Route::middleware(['auth', 'role:admin'])->group(function() {
 
         Route::get('/delete/slider/{id}', 'DeleteSlider')->name('delete.slider');
 
+        Route::post('/delete-selected-sliders', 'deleteSelected')->name('delete.selected.sliders');
+
+
     });
 
     // Banner All Route
