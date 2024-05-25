@@ -14,6 +14,9 @@ use App\Http\controllers\Backend\ProductController;
 use App\Http\controllers\Backend\VendorProductController;
 use App\Http\controllers\Backend\SliderController;
 use App\Http\controllers\Backend\BannerController;
+
+use App\Http\controllers\Frontend\IndexController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -268,9 +271,8 @@ Route::middleware(['auth', 'role:admin'])->group(function() {
 
     });
 
+}); // end admin middleware
 
+// frontend product details route
 
-}); // end middleware
-
-
-
+Route::get('/product/details/{id}/{slug}', [IndexController::class, 'ProductDetails']);
